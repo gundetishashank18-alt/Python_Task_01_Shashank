@@ -1,0 +1,10 @@
+first_name = input("Enter First Name: ").lower()
+last_name = input("Enter Last Name: ").lower()
+birth_year = input("Enter Birth Year: ")
+
+print("\nUsername Suggestions:")
+print(f"1. {first_name}{last_name}{birth_year}")
+print(f"2. {first_name[0]}.{last_name}{birth_year[-2:]}")
+print(f"3. {last_name}_{first_name}")
+print(f"4. {first_name}_{birth_year}")
+print(f"5. {last_name}{first_name[0]}{birth_year}")
