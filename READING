@@ -1,0 +1,73 @@
+
+## 🔧 Programs & Logic Explained
+
+### 1. multiplication_table.py
+**What it does:** Prints the multiplication table from 1 to 10 for a user-provided number.
+
+**Logic:**
+- Takes number input using `input()`
+- `for i in range(1, 11)` loop runs 10 times
+- Calculates `num * i` in each iteration and prints using f-string
+
+**Example:** Input 7 → Output: 7 x 1 = 7, 7 x 2 = 14... 7 x 10 = 70
+
+### 2. number_analysis.py
+**What it does:** Takes a number N and displays sum, even numbers count, and odd numbers count from 1 to N.
+
+**Logic:**
+- Initialize 3 variables: `total`, `even_count`, `odd_count` to 0
+- Check each number in `for i in range(1, N+1)` loop
+- Add to sum using `total += i`
+- If `i % 2 == 0` then even, else odd
+
+**Example:** Input 10 → Sum = 55, Even = 5, Odd = 5
+
+### 3. patterns.py
+**What it does:** Prints 3 different patterns using nested loops.
+
+**Logic:**
+- **Pattern 1:** Outer loop for rows, inner loop prints stars on same line using `end=""`
+- **Pattern 2:** Reverse loop `range(n, 0, -1)` decreases stars
+- **Pattern 3:** Inner loop prints `j` value to get 1, 12, 123
+- Empty `print()` moves to next line
+
+### 4. password_attempt.py
+**What it does:** Basic login system. Prints "Access Granted" if password is correct, "Account Locked" after 3 wrong attempts.
+
+**Logic:**
+- Store original password in `correct_password` variable
+- `while attempts > 0` loop gives 3 chances
+- If password matches, use `break` to stop loop
+- If wrong, decrease `attempts -= 1` and ask again
+
+**Real-world use:** Used in login pages, ATM pins, etc.
+
+### 5. username_generator.py
+**What it does:** Takes first name, last name, birth year and generates 5 username suggestions.
+
+**Logic:**
+- Convert all to lowercase using `.lower()`
+- `first_name[0]` is first letter, `birth_year[-2:]` is last 2 digits
+- Create different combinations using string concatenation
+- Example: soham + patel + 2004 = sohampatel2004
+
+**Real-world use:** Similar to username suggestions on Instagram, Gmail sign-up
+
+### 6. number_guessing.py [Bonus]
+**What it does:** Computer selects a random number between 1-50. User has to guess it.
+
+**Logic:**
+- Generate secret number using `random.randint(1, 50)`
+- `while True` infinite loop runs until correct guess
+- Count attempts using `attempts += 1`
+- Show "Too low" if guess is smaller, "Too high" if larger
+
+## ▶️ How to Run
+Open Terminal/CMD:
+```bash
+python multiplication_table.py
+python number_analysis.py
+python patterns.py
+python password_attempt.py
+python username_generator.py
+python number_guessing.py
